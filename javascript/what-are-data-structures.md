@@ -15,6 +15,7 @@ JavaScript has **primitive** and **non-primitive** data structures.
 [Objects](#objects)<br>
 [Stacks](#stacks)<br>
 [Queues](#queues)<br>
+[Linked Lists](#linked-lists)<br>
 
 
 ## Arrays
@@ -254,3 +255,115 @@ console.log(myQueueu.front()); // 20
 
 console.log(myQueue.size()); // 2
 ```
+
+Pros
+- Simple and easy to understand.
+- Good for implementing algorithms that require FIFO, such as scheduling and resource allocation.
+
+Cons
+- Simple data structure with limited functionality.
+- Can lead to resource starvation if one or more elements are blocking the queue.
+
+## Linked Lists
+
+Does not use physical placement of data in memory. Instead uses a refrencing system where elements are stored in nodes that contain a pointer to the next node. Allows for effecient insertion and removal of items without the need for reorganization.
+
+There are two kinds of linked lists, **singly linked lists** and **doubly linked lists**.
+- **singly linked lists** have only a single pointer that indicates the next node.
+- **doubly linked lists** have two pointers, one that points to the next node and one that points to the previous node. Doubly linked lists also perform better with certain methods but consume more memory because of the two pointers.
+
+Example of singly linked list: 
+
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  append(value) { // adds a new node to the end of the linked list
+    const newNode = new Node(value); // create a new node with the given value
+    if (!this.head) { // if the linked list is empty, set the head and tail to the new node
+      this.head = newNode;
+      this.tail = newNode;
+    } else { // otherwise, add the new node to the end of the list and update the tail
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+  }
+
+  print() { // prints the values of all nodes in the linked list
+    let currentNode = this.head;
+    while (currentNode) {
+      console.log(currentNode.value);
+      currentNode = currentNode.next;
+    }
+  }
+}
+```
+
+Example using this linked list: 
+
+```javascript
+const myList = new LinkedList();
+myList.append(10);
+myList.append(20);
+myList.append(30);
+myList.print(); // output: 10 20 30
+```
+
+Example of a doubly linked list:
+
+```javascript
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+    this.prev = null;
+  }
+}
+
+class DoublyLinkedList {
+  constructor() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  append(value) { // adds a new node to the end of the linked list
+    const newNode = new Node(value); // create a new node with the given value
+    if (!this.head) { // if the linked list is empty, set the head and tail to the new node
+      this.head = newNode;
+      this.tail = newNode;
+    } else { // otherwise, add the new node to the end of the list and update the tail
+      newNode.prev = this.tail;
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+  }
+
+  print() { // prints the values of all nodes in the linked list
+    let currentNode = this.head;
+    while (currentNode) {
+      console.log(currentNode.value);
+      currentNode = currentNode.next;
+    }
+  }
+}
+```
+
+Pros
+- Effecient for insertion and removal of new elements from unknown locations.
+- Less complex than restructuring an array.
+
+Cons
+- Uses more memory.
+- Inefficient at retrieving a specific element.
+- Inefficient at traversing the list backwards.
+
