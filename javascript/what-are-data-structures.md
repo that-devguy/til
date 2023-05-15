@@ -13,6 +13,7 @@ JavaScript has **primitive** and **non-primitive** data structures.
 
 [Arrays](#arrays)<br>
 [Objects](#objects)<br>
+[Stacks](#stacks)<br>
 
 
 ## Arrays
@@ -125,5 +126,72 @@ Pros
 Cons
 - Can be less efficient than other data structures for certain operations, such as iterating over large collections of data.
 - Can become complex and difficult to manage if they contain large quantities of properties or nested objects.
+
+## Stacks
+
+Store info in the form of a list using **LIFO**(last in, first out). Elements can NOT be added or removed out of order, always has to follow the LIFO pattern.
+
+*The undo/redo functionality many programs have.*
+
+Example of a stack data structure with five methods:
+
+```javascript
+class Stack {
+    constructor() {
+        this.items = []; // initializes an empty array to store stack elements
+    }
+
+    push(element) { // adds an element to the top of the stack
+        this.items.push(element); // adds the element to the end of the array (top of stack)
+    }
+
+    pop() { // removes the top element of the stack
+        if (this.items.length === 0) { // checks if the stack is empty
+            return "error - stack is empty";
+        }
+        return this.items.pop(); // remove and return the top element
+    }
+
+    peek() { // returns the top element of the stack with out removing it
+        return this.items[this.items.length - 1]; // return last item in the array (top of stack)
+    }
+
+    isEmpty() { // checks for an empty stack
+        return this.items.length === 0; // returns true is the stack is empty
+    }
+
+    size() { // returns the size of the stack
+        return this.items.length; // returns length of the array (number of elements in the stack)
+    }
+}
+```
+
+Example use of this stack:
+
+```javascript
+const stack = new Stack();
+
+stack.push(10);
+stack.push(20);
+stack.push(30);
+
+console.log(stack.peek()); // 30
+
+console.log(stack.pop()); // 30
+
+console.log(stack.size()); // 2
+```
+
+Pros
+- Simple and easy to understand.
+- Fast operations with push, pop, and peek.
+- Memory efficient.
+- Useful for depth-first search, backtracking, and function call stacks.
+
+Cons
+- Simple data structure with limited functionality.
+- Not suitable for complex data types.
+- Can lead to **stack overflow**(error that occurs when a program tries to store more data on the call stack than it can handle)
+
 
 
