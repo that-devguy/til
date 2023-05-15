@@ -367,3 +367,107 @@ Cons
 - Inefficient at retrieving a specific element.
 - Inefficient at traversing the list backwards.
 
+## Trees
+
+A data structure that links nodes in a parent/child relationship. Trees are formed by a **root** node and all the nodes that come off that node are called **children**. **Leaf nodes** are the nodes at the bottom with no children and the **height** of the tree is determined by the number of connections.
+
+Trees are non linear.
+
+Requirements for trees:
+- The only valid connection between nodes is from parent to child.
+- Must have only one root.
+
+Example of a **BST**(Binary Search Tree):
+
+```javascript
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(value) { // adds a new node with the given value to the tree
+        const newNode = new Node(value); // create a new node with the given value
+        if (!this.root) { // if the tree is empty, set the root to the new node
+            this.root = newNode;
+        } else { // else, find the correct position to insert new node
+            let currentNode = this.root;
+            while (true) {
+                if (value < currentNode.value) { // if the value is less than the current node, move to left child
+                    if (!currentNode.left) { // if there is no left child, insert the new node as the left child
+                        currentNode.left = newNode;
+                        break;
+                    }
+                    currentNode = currentNode.left;
+                } else { // if the value is greater than or equal to the current node's value, move to the right child
+                    if (!currentNode.right) { // if there is no right child, insert the new node as the right child
+                        currentNode.right = newNode;
+                        break;
+                    }
+                    currentNode = currentNode.right;
+                }
+            }
+        }
+    }
+
+    search(value) { // returns the node with the given value, or null if it does not exist in the tree
+        let currentNode = this.root;
+        while (currentNode) {
+            if (value === currentNode.value) {
+                return currentNode;
+            } else if (value < currentNode.value) {
+                currentNode = currentNode.left;
+            } else {
+                currentNode = currentNode.right;
+            }
+        }
+        return null;
+    }
+
+    print() { // prints the values of all nodes in the tree in ascending order
+        const result = [];
+        function traverse(node) {
+            if (node) {
+                traverse(node.left);
+                result.push(node.value);
+                traverse(node.right);
+            }
+        }
+        traverse(this.root);
+        console.log(result.join(' '));
+    }
+}
+```
+
+Example of how you might use the BST class:
+
+```javascript
+const myTree = new BinarySearchTree();
+myTree.insert(10);
+myTree.insert(5);
+myTree.insert(15);
+myTree.insert(2);
+myTree.insert(7);
+myTree.insert(12);
+myTree.insert(20);
+myTree.print(); // 2 5 7 10 12 15 20
+console.log(myTree.search(7)); // Node { value: 7, left: Node { value: 2, left: null, right: null
+```
+
+Pros
+- Ideal for storing hierarchical relationships.
+- Dynamic size.
+- Fast insert/delete operations.
+- Binary search trees are efficient at searches.
+
+Cons
+- Slow at rearranging nodes.
+- Child nodes hold no info about their parent node.
+- Binary search trees can degenerate into linear search if not implemeneted with balanced subtrees.
