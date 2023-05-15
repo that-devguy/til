@@ -14,6 +14,7 @@ JavaScript has **primitive** and **non-primitive** data structures.
 [Arrays](#arrays)<br>
 [Objects](#objects)<br>
 [Stacks](#stacks)<br>
+[Queues](#queues)<br>
 
 
 ## Arrays
@@ -193,5 +194,63 @@ Cons
 - Not suitable for complex data types.
 - Can lead to **stack overflow**(error that occurs when a program tries to store more data on the call stack than it can handle)
 
+## Queues
 
+Similar to [stacks](#stacks) except that they follow **FIFO**(first in, first out).
 
+Example queue usages are background tasks and printing/task processing.
+
+Example of a queue data structure:
+
+```javascript
+class Queue {
+  constructor() {
+    this.items = []; // initialize an empty array to store the queue elements
+  }
+
+  enqueue(element) { // adds an element to the back of the queue
+    this.items.push(element); // add the element to the end of the array (back of queue)
+  }
+
+  dequeue() { // removes the front element from the queue
+    if (this.isEmpty()) { // check if the queue is empty
+      return "error - queue is empty";
+    }
+    return this.items.shift(); // remove and return the first element in the array (which is the front of the queue)
+  }
+
+  front() { // returns the front element of the queue without removing it
+    if (this.isEmpty()) { // check if the queue is empty
+      return "error - queue is empty";
+    }
+    return this.items[0]; // return the first element in the array (which is the front of the queue)
+  }
+
+  isEmpty() { // checks if the queue is empty
+    return this.items.length === 0; // return true if the length of the array is 0 (which means the queue is empty)
+  }
+
+  size() { // returns the number of elements in the queue
+    return this.items.length; // return the length of the array (which is the number of elements in the queue)
+  }
+}
+```
+
+Example use of this queue:
+
+```javascript
+let myQueue = new Queue();
+
+myQueue.enqueue(10);
+myQueue.enqueue(20);
+myQueue.enqueue(30);
+
+console.log(myQueue.items); // [10, 20, 30]
+
+myQueue.dequeue(); 
+console.log(myQueue.items); // [20, 30]
+
+console.log(myQueueu.front()); // 20
+
+console.log(myQueue.size()); // 2
+```
