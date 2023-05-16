@@ -21,4 +21,8 @@ var closure = outerFunction(); // assigns the returned inner function to a varia
 closure(); // Hello
 ```
 
-In this example, `outerFunction()` declares a variable and then defines an inner function called `innerFunction()`. `innerFunction()` has access to the `outerVariable` even after the `outerFunction()` has finished executing. We create a closure by calling the `outerFunction()` and assigning the returned `innerFunction()` to `closure`. When we call `closure()` it still has access to the `outerVariable` even after the closure has finished executing and logs `'Hello'`.
+In this example, `outerFunction()` declares a variable and then defines an inner function called `innerFunction()`. `innerFunction()` has access to the `outerVariable` even after the `outerFunction()` has finished executing. 
+
+We create a closure by calling the `outerFunction()` and assigning the returned `innerFunction()` to `closure`. 
+
+When we call `closure()` it still has access to the `outerVariable` even after the closure has finished executing and logs `'Hello'`.

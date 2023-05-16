@@ -16,6 +16,7 @@ JavaScript has **primitive** and **non-primitive** data structures.
 [Stacks](#stacks)<br>
 [Queues](#queues)<br>
 [Linked Lists](#linked-lists)<br>
+[Trees](#trees)<br>
 
 
 ## Arrays
