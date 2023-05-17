@@ -12,6 +12,7 @@
 - [Algorithms](/javascript/algorithms/)
     - [Bubble Sort](/javascript/algorithms/bubble-sort.md)
     - [Quick Sort](/javascript/algorithms/quick-sort.md)
+    - [Merge Sort](/javascript/algorithms/merge-sort.md)
 - [Closures](/javascript/closures.md)
 - [Factory Functions](/javascript/factory-functions.md)
 - [What Are Data Structures](/javascript/what-are-data-structures.md)

@@ -12,27 +12,27 @@ How it works:
 
 ```javascript
 function quickSort(array) {
-  if (array.length <= 1) { // Base case: If the array has 0 or 1 element, it is already sorted
-    return array;
-  }
-
-  const pivot = array[array.length - 1]; // Choose a pivot element (here, we select the last element)
-
-  // Create two empty arrays for elements smaller and larger than the pivot
-  const smaller = [];
-  const larger = [];
-  
-  for (let i = 0; i < array.length - 1; i++) { // Iterate through the array, excluding the pivot element
-    if (array[i] < pivot) {
-      smaller.push(array[i]); // Element is smaller than the pivot, add it to the 'smaller' array
-    } else {
-      larger.push(array[i]); // Element is larger than or equal to the pivot, add it to the 'larger' array
+    if (array.length <= 1) { // Base case: If the array has 0 or 1 element, it is already sorted
+        return array;
     }
-  }
 
-  // Recursively call quickSort on the 'smaller' and 'larger' arrays
-  // Concatenate the sorted 'smaller' array, the pivot, and the sorted 'larger' array
-  return [...quickSort(smaller), pivot, ...quickSort(larger)];
+    const pivot = array[array.length - 1]; // Choose a pivot element (here, we select the last element)
+
+    // Create two empty arrays for elements smaller and larger than the pivot
+    const smaller = [];
+    const larger = [];
+    
+    for (let i = 0; i < array.length - 1; i++) { // Iterate through the array, excluding the pivot element
+        if (array[i] < pivot) {
+        smaller.push(array[i]); // Element is smaller than the pivot, add it to the 'smaller' array
+        } else {
+        larger.push(array[i]); // Element is larger than or equal to the pivot, add it to the 'larger' array
+        }
+    }
+
+    // Recursively call quickSort on the 'smaller' and 'larger' arrays
+    // Concatenate the sorted 'smaller' array, the pivot, and the sorted 'larger' array
+    return [...quickSort(smaller), pivot, ...quickSort(larger)];
 }
 
 // Example usage
