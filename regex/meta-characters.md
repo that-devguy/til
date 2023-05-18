@@ -44,7 +44,7 @@ List of position characters:
 - `\B`: Matches a non-word boundary.
 
 ## Character Classes
-A set of characters enclised within brackets `[]` that represents a single character from the set of characters specified within the class. This allows you to define patterns that match specific sets of characters without explicitly listing each character individually.
+A set of characters enclosed within brackets `[]` that represents a single character from the set of characters specified within the class. This allows you to define patterns that match specific sets of characters without explicitly listing each character individually.
 
 Example of a character class:
 
