@@ -8,8 +8,6 @@ Special characters that have a predefined meaning and serve as building blocks f
 - [Position](#position)
 - [Character Classes](#character-classes)
 - [Alternation](#alternation)
-- [Capturing Groups and Back Reference](#capturing-groups-and-back-reference)
-
 
 ## Single Characters
 Characters that provide shortcuts for matching specific types of characters or character classes.
@@ -64,4 +62,19 @@ Important notes about character classes:
 
 ## Alternation
 
-## Capturing Groups and Back Reference
+Refers to the concept of providing multiple choices or options for matching. It allows you to specify alternative for a particular position within a pattern. Represented by a pipe, `|`.
+
+Example of alternation:
+
+*Example text:* zach@example.com, zach@example.net, and zach@example.org
+
+*Our regex:* `\w+@\w+\.(net|com)`
+
+*Our result:* `zach@example.com`, `zach@example.net`, and zach@example.org
+
+Important notes about alternation:
+- When the regex encounters the `|`, it will try to match the expression before the `|` or the one after. It will choose the first alternative that matches.
+- You can have more than two alternatives. For instance, if you look at the example above, we could select all 3 emails by changing the alternation to `(net|com|org)`.
+- Alternatives are usually grouped together within parentheses. This allows us to apply additional modifiers or contraints to the group as a whole.
+- Order matters. Regex evalutates the alternatives from left to right, and stops evaluating the remaining alternatives once it's found a match.
+
