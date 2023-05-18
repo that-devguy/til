@@ -1,4 +1,4 @@
-# Regex
+# What is Regex?
 
 **Regex(regular expression)** is a sequence of characters that defines a specific search pattern. They provide a concise and flexible way to search, extract and replace specific patterns within strings.
 

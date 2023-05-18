@@ -5,6 +5,7 @@
 
 ### Table of Contents:
 - [JavaScript](#javascript)
+- [Regex](#regex)
 
 ---
 
@@ -15,6 +16,7 @@
     - [Quick Sort](/javascript/algorithms/quick-sort.md)
 - [Closures](/javascript/closures.md)
 - [Factory Functions](/javascript/factory-functions.md)
-- [Regex](/javascript/regex.md)
 - [What Are Data Structures](/javascript/what-are-data-structures.md)
 
+### Regex:
+- [What is Regex](/regex/what-is-regex.md)
