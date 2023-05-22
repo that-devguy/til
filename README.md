@@ -21,6 +21,7 @@
 
 ### MongoDB:
 - [Executing CRUD Queries](/mongodb/executing-crud-queries.md)
+- [Instance Methods](/mongodb/instance-methods.md)
 - [Object Data Modeling](/mongodb/object-data-modeling.md)
 - [What is MonoDB](/mongodb/what-is-mongodb.md)
 
