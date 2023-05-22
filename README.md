@@ -20,6 +20,7 @@
 - [What Are Data Structures](/javascript/what-are-data-structures.md)
 
 ### MongoDB:
+- [Object Data Modeling](/mongodb/object-data-modeling.md)
 - [What is MonoDB](/mongodb/what-is-mongodb.md)
 
 ### Regex:
