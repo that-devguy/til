@@ -1,6 +1,8 @@
 # Executing CRUD Queries using Mongoose
 
-Start by installing Mongoose and establish a connection to your MongoDB database. [Define a model](/mongodb/object-data-modeling.md) by creating defining a schema.
+Start by installing Mongoose and establish a connection to your MongoDB database. Define a model by creating defining a schema. 
+
+*Refer to [Object Data Modeling](/mongodb/object-data-modeling.md)*.
 
 To create a new document, create a new instance of the model defined by the schema and call the `save()` method. This will save the document to the database:
 
