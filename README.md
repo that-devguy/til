@@ -20,9 +20,12 @@
 - [What Are Data Structures](/javascript/what-are-data-structures.md)
 
 ### MongoDB:
+- [Aggregates](/mongodb/aggregates.md)
 - [Executing CRUD Queries](/mongodb/executing-crud-queries.md)
 - [Instance Methods](/mongodb/instance-methods.md)
 - [Object Data Modeling](/mongodb/object-data-modeling.md)
+- [Subdocuments](/mongodb/subdocuments.md)
+- [Virtuals](/mongodb/virtuals.md)
 - [What is MonoDB](/mongodb/what-is-mongodb.md)
 
 ### Regex:

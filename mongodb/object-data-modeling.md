@@ -2,6 +2,18 @@
 
 In MongoDB you can define the structure of a database and enforce data validation using schema and validators when using an **Object Data Modeling (ODM)** library like **Mongoose**.
 
+Permitted SchemaTypes are:
+- String
+- Number
+- Date
+- Buffer
+- Boolean
+- Mixed
+- ObjectId
+- Array
+- Decimal
+- Map
+
 Start by installing Mongoose:
 
 ```javascript
