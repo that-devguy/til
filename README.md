@@ -31,6 +31,7 @@
 
 ### Progressive Web Applications:
 - [Hot Module Replacement](/progressive-web-applications/hot-module-replacement.md)
+- [WorkBox Service Workers](/progressive-web-applications/workbox-service-workers.md)
 
 ### Regex:
 - [Meta-characters](/regex/meta-characters.md)
