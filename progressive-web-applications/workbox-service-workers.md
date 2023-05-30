@@ -40,4 +40,4 @@ if ('serviceWorker' in navigator) {
 
 6. Build and serve your web application using a static file server or dev environment.
 
-The service worker will intercept network requests, cache responses, and provide offline support based on the config specificed during the wizard setpup.
+The service worker will intercept network requests, cache responses, and provide offline support based on the config specificed during the wizard setup.
