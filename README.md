@@ -6,6 +6,7 @@
 ### Table of Contents:
 - [JavaScript](#javascript)
 - [MongoDB](#mongodb)
+- [Progressive Web Applications](#progressive-web-applications)
 - [Regex](#regex)
 
 ---
@@ -27,6 +28,9 @@
 - [Subdocuments](/mongodb/subdocuments.md)
 - [Virtuals](/mongodb/virtuals.md)
 - [What is MonoDB](/mongodb/what-is-mongodb.md)
+
+### Progressive Web Applications:
+- [Hot Module Replacement](/progressive-web-applications/hot-module-replacement.md)
 
 ### Regex:
 - [Meta-characters](/regex/meta-characters.md)
