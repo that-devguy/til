@@ -36,6 +36,7 @@
 
 ### React
 - [Create a React Application](/react/create-react-app.md)
+- [Render Elements](/react/render-elements.md)
 
 ### Regex:
 - [Meta-characters](/regex/meta-characters.md)
