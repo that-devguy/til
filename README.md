@@ -35,7 +35,7 @@
 - [WorkBox Service Workers](/progressive-web-applications/workbox-service-workers.md)
 
 ### React
-- [Create a React Application](/react-app/create-react-app.md)
+- [Create a React Application](/react/create-react-app.md)
 
 ### Regex:
 - [Meta-characters](/regex/meta-characters.md)
