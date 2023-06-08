@@ -35,6 +35,7 @@
 - [WorkBox Service Workers](/progressive-web-applications/workbox-service-workers.md)
 
 ### React
+- [Conditional Rendering](/react/conditional-rendering.md)
 - [Create a React Application](/react/create-react-app.md)
 - [Render Elements](/react/render-elements.md)
 
