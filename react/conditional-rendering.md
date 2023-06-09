@@ -1,6 +1,6 @@
 # Conditional Rendering
 
-In React, you can conditionally render JSX uding JS syntax like `if` statements, `&&` and `? :` operators.
+In React, you can conditionally render JSX using JS syntax like `if` statements, `&&` and `? :` operators.
 
 Here's an example of a `PackingList` component that renders `Item`s that can be marked as packed or not:
 ```javascript
